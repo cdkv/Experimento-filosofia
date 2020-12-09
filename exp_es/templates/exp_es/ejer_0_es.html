@@ -1,0 +1,52 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Ejercicio
+{% endblock %}
+
+{% block content %}
+
+<p>
+    Ejercicio ejemplo
+</p>
+
+<table style="border: hidden">
+
+  <tr>
+
+    <td> {{ player.imagen1_palabra1 }} </td>
+
+    <td> </td>
+
+    <td> {{ player.imagen1_palabra2 }}  </td>
+
+  </tr>
+
+  <tr>
+
+    <td> </td>
+
+    <td> <img src="{% static '01.jpg' %}"/> </td>
+
+    <td> </td>
+
+  </tr>
+
+  <tr>
+
+    <td> {{ player.imagen1_palabra3 }}  </td>
+
+    <td>  </td>
+
+    <td> {{ player.imagen1_palabra4 }}  </td>
+
+  </tr>
+
+</table>
+
+{% formfield player.palabraelegida1  %}
+
+    {% next_button %}
+
+{% endblock %}
