@@ -1,0 +1,46 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Cuestionario
+{% endblock %}
+
+{% block content %}
+
+<p>
+{% if player.pais_nacionalidad == "otro" %}
+
+Por favor, especifique su nacionalidad
+
+{% formfield player.otro_nacionalidad  %}
+
+{% endif %}
+
+</p>
+
+<p>
+{% if player.pais_vive == "otro" %}
+
+Por favor, especifique el país en el que vive
+
+{% formfield player.otro_vive  %}
+
+{% endif %}
+
+</p>
+
+<p>
+{% if player.pais_nacio == "otro" %}
+
+Por favor, especifique el país en que nacio
+
+{% formfield player.otro_nacio  %}
+
+{% endif %}
+
+</p>
+
+
+    {% next_button %}
+
+{% endblock %}

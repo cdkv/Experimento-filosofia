@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Cuestionario
+{% endblock %}
+
+{% block content %}
+
+<p>
+¿Qué actitud política tienes?
+
+    {% formfield player.actitud_politica  %}
+</p>
+
+
+    {% next_button %}
+
+{% endblock %}

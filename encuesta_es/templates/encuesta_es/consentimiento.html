@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Consentimiento informado
+{% endblock %}
+
+{% block content %}
+
+<p>
+Aca va el consentimiento informado
+</p>
+
+{% formfield player.consentimiento  %}
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Cuestionario
+{% endblock %}
+
+{% block content %}
+
+{% if player.idiomas2 == "otro" %}
+
+
+{% formfield player.especificar_otro2  %}
+
+{% endif %}
+
+
+{% if player.masidiomas2 == "Si" %}
+
+
+<p>
+¿Qué segundo idioma habla de forma nativa?
+</p>
+
+{% formfield player.idiomas3  %}
+
+{% endif %}
+
+{% formfield player.masidiomas3  %}
+
+
+    {% next_button %}
+
+{% endblock %}

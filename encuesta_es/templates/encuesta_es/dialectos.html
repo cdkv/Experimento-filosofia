@@ -1,0 +1,118 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Cuestionario
+{% endblock %}
+
+{% block content %}
+
+<p>
+{% if player.idiomas1 != "otro" %}
+{% if player.idiomas1 != "Prefiero no responder" %}
+
+    ¿Habla algún dialecto de {{ player.idiomas1 }} ?
+
+
+{% formfield player.dialecto1  %}
+
+{% endif %}
+{% endif %}
+
+</p>
+
+<p>
+{% if player.idiomas1 == "otro" %}
+{% if player.especificar_otro1 != "" %}
+
+    ¿Habla algún dialecto de {{ player.especificar_otro1 }} ?
+
+
+{% formfield player.dialecto1  %}
+
+{% endif %}
+{% endif %}
+</p>
+
+
+<p>
+{% if player.idiomas2 != "otro" %}
+{% if player.idiomas2 != "Prefiero no responder" %}
+{% if player.idiomas2 != "" %}
+
+    ¿Habla algún dialecto de {{ player.idiomas2 }} ?
+
+
+{% formfield player.dialecto2  %}
+
+{% endif %}
+{% endif %}
+{% endif %}
+
+</p>
+
+<p>
+{% if player.idiomas2 == "otro" %}
+{% if player.especificar_otro2 != "" %}
+
+    ¿Habla algún dialecto de {{ player.especificar_otro2 }} ?
+
+
+{% formfield player.dialecto2  %}
+
+{% endif %}
+{% endif %}
+</p>
+
+
+<p>
+{% if player.idiomas3 != "otro" %}
+{% if player.idiomas3 != "Prefiero no responder" %}
+{% if player.idiomas3 != "" %}
+
+    ¿Habla algún dialecto de {{ player.idiomas3 }} ?
+
+
+{% formfield player.dialecto3  %}
+
+{% endif %}
+{% endif %}
+{% endif %}
+
+</p>
+
+<p>
+{% if player.idiomas3 == "otro" %}
+{% if player.especificar_otro3 != "" %}
+
+    ¿Habla algún dialecto de {{ player.especificar_otro3 }} ?
+
+
+{% formfield player.dialecto3  %}
+
+{% endif %}
+{% endif %}
+</p>
+
+
+<p>
+{% if player.idiomas4 != "otro" %}
+{% if player.idiomas4 != "Prefiero no responder" %}
+{% if player.idiomas4 != "" %}
+
+    ¿Habla algún dialecto de {{ player.idiomas4 }} ?
+
+
+{% formfield player.dialecto4  %}
+
+{% endif %}
+{% endif %}
+{% endif %}
+
+</p>
+
+
+
+    {% next_button %}
+
+{% endblock %}

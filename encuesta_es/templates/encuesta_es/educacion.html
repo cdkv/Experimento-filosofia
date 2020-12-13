@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Cuestionario
+{% endblock %}
+
+{% block content %}
+
+<p>
+¿Cuál es el nivel de educación más alto que has alcanzado?
+    {% formfield player.nivel_educacion  %}
+</p>
+
+<p>
+¿Cuánta filosofía ha hecho durante su educación?
+
+    {% formfield player.filosofia  %}
+</p>
+
+<p>
+¿Cuál es el nivel de educación más alto alcanzado por tu madre o padre?
+    {% formfield player.educacion_padres  %}
+</p>
+
+
+
+    {% next_button %}
+
+{% endblock %}

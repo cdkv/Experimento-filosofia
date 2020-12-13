@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Cuestionario
+{% endblock %}
+
+{% block content %}
+
+
+<p>
+{% if player.religion == "otro" %}
+
+Por favor, especifique la religion
+
+    {% formfield player.religion_otro  %}
+
+{% endif %}
+
+</p>
+
+
+<p>
+¿Qué tan importante es la religión para ti?
+    {% formfield player.importancia_religion %}
+</p>
+
+
+    {% next_button %}
+
+{% endblock %}
