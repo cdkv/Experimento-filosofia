@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Segunda actividad
+{% endblock %}
+
+{% block content %}
+
+<p>
+    Ejercicio:
+</p>
+
+<ul>
+    <li> Durante esta parte del estudio, aparecerá una imagen grande rodeada de cuatro palabras. </li>
+    <li> Debe indicar cuál de las cuatro palabras que rodean la imágen describe mejor a la persona representada allí. </li>
+</ul>
+
+<ul>
+    <li> Ahora se te va a mostrar varias imágenes de ojos. Alrededor de cada imagen habrá cuatro palabras. </li>
+    <li> Para cada par de ojos, elija la palabra que mejor describa a la persona en la imagen. </li>
+    <li> Puede sentir que se aplica más de una palabra, pero elija solo: la que consideres más adecuada. </li>
+    <li> Antes de hacer su elección, asegúrese de que has leído las 4 palabras. </li>
+    <li> Debe intentar hacer la tarea lo más rápido posible, pero no será cronometrado.</li>
+    <li> Si realmente no sabe lo que significa una palabra, puede pedirle al experimentador su definición. </li>
+</ul>
+
+
+
+
+Presione siguiente para continuar. El estudio comienza inmediatamente al presionar enter.
+
+    {% next_button %}
+
+{% endblock %}
