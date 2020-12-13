@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Preguntas
+{% endblock %}
+
+{% block content %}
+
+<p>
+¿Tuvo alguna dificultad para ver el video?
+</p>
+{% formfield player.dificultad_video %}
+
+<p>
+    Ahora debe contar que pasó en el video. Sin embargo, hay un conjunto de pautas que detallan cómo debe responder. Lea las siguientes pautas antes de comenzar.
+</p>
+
+<ul>
+    <li> Debe describir lo que vio en el video como si le estuvieras contando a tu mejor amigo una historia sobre algo que realmente habías visto pasar en persona. </li>
+    <li> Tu descripción puede ser tan larga o tan corta como desees y puedes incluir tanto detalle como quieras mencionar.</li>
+    <li> Lo más importante es que describas lo que viste en el video como si estuvieras contandole una historia a tu amigo sobre algo que has presenciado en la vida real y no en una pantalla.</li>
+</ul>
+
+{% formfield player.vi_des %}
+
+    {% next_button %}
+
+{% endblock %}
